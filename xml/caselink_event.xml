@@ -4,8 +4,8 @@
     <CustomGroups>
         <CustomGroup>
             <name>caselink_event</name>
-            <title>Link event to parent case</title>
-            <extends>Event</extends>
+            <title>(E::ts('Link event to parent case'))</title>
+            <extends>(E::ts('Event'))</extends>
             <style>Inline</style>
             <collapse_display>1</collapse_display>
             <help_pre></help_pre>
@@ -22,7 +22,7 @@
     <CustomFields>
         <CustomField>
             <name>case_id</name>
-            <label>Link to parent case</label>
+            <label>(E::ts('Link to parent case'))</label>
             <data_type>String</data_type>
             <html_type>Select</html_type>
             <is_required>0</is_required>
