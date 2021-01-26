@@ -1,22 +1,22 @@
 <div id="case-caselink-events" class="crm-accordion-wrapper collapsed">
 
-    <div class="crm-accordion-header">{ts}Related sub events{/ts}</div>
+    <div class="crm-accordion-header">(E::ts('Related sub events'))</div>
 
     <div class="crm-accordion-body">
         {if $permission EQ 'edit'}
             <div class="action-link">
                 {capture assign=newEventURL}{crmURL p="civicrm/event/add" q="reset=1&action=add&caselink_case_id=`$caseId`"}{/capture}
                 <a accesskey="N" href="{$newEventURL}" class="button">
-                    <span><div class="icon add-icon"></div>{ts}New related event{/ts}</span>
+                    <span><div class="icon add-icon"></div>(E::ts('New related event'))</span>
                 </a>
             </div>
         {/if}
         <table>
             <thead>
             <tr>
-                <th class="ui-state-default">{ts}Start date{/ts}</th>
-                <th class="ui-state-default">{ts}Event type{/ts}</th>
-                <th class="ui-state-default">{ts}Title{/ts}</th>
+                <th class="ui-state-default">(E::ts('Start date'))</th>
+                <th class="ui-state-default">(E::ts('Event type'))</th>
+                <th class="ui-state-default">(E::ts('Title'))</th>
                 <th class="no-sort ui-state-default"></th>
             </tr>
             </thead>
@@ -28,7 +28,7 @@
                     <td>{$event.event_type}</td>
                     <td>{$event.title}</td>
                     <td>
-                        <a href="{crmURL p="civicrm/event/manage/settings" q="action=update&reset=1&id=`$event.event_id`"}">{ts}Configure event{/ts}
+                        <a href="{crmURL p="civicrm/event/manage/settings" q="action=update&reset=1&id=`$event.event_id`"}">(E::ts('Configure event'))
                     </td>
                 </tr>
             {/foreach}
