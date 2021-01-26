@@ -4,8 +4,8 @@
     <CustomGroups>
         <CustomGroup>
             <name>caselink_case</name>
-            <title>Link case to parent case</title>
-            <extends>Case</extends>
+            <title>(E::ts('Link case to parent case'))</title>
+            <extends>(E::ts('Case'))</extends>
             <style>Inline</style>
             <collapse_display>1</collapse_display>
             <help_pre></help_pre>
@@ -22,9 +22,9 @@
     <CustomFields>
         <CustomField>
             <name>case_id</name>
-            <label>Link to parent case</label>
+            <label>(E::ts('Link to parent case'))</label>
             <data_type>String</data_type>
-            <html_type>Select</html_type>
+            <html_type>(E::ts('Select'))</html_type>
             <is_required>0</is_required>
             <is_searchable>0</is_searchable>
             <is_search_range>0</is_search_range>
@@ -42,7 +42,7 @@
     <OptionGroups>
         <OptionGroup>
             <name>caselink_cases</name>
-            <title>Case link cases</title>
+            <title>(E::ts('Case link cases'))</title>
             <is_reserved>1</is_reserved>
             <is_active>1</is_active>
         </OptionGroup>
