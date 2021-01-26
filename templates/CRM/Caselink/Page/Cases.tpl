@@ -1,23 +1,23 @@
 <div id="case-caselink-cases" class="crm-accordion-wrapper collapsed">
 
-    <div class="crm-accordion-header">{ts}Related sub cases{/ts}</div>
+    <div class="crm-accordion-header">(E::ts('Related sub cases'))</div>
 
     <div class="crm-accordion-body">
         {if $permission EQ 'edit'}
             <div class="action-link">
                 {capture assign=newCaseUrl}{crmURL p="civicrm/case/add" q="reset=1&action=add&context=standalone&caselink_case_id=`$caseId`"}{/capture}
                 <a accesskey="N" href="{$newCaseUrl}" class="button">
-                    <span><div class="icon add-icon"></div>{ts}New related case{/ts}</span>
+                    <span><div class="icon add-icon"></div>(E::ts('New related case'))</span>
                 </a>
             </div>
         {/if}
         <table>
             <thead>
             <tr>
-                <th class="ui-state-default">{ts}Client{/ts}</th>
-                <th class="ui-state-default">{ts}Case type{/ts}</th>
-                <th class="ui-state-default">{ts}Status{/ts}</th>
-                <th class="ui-state-default">{ts}Subject{/ts}</th>
+                <th class="ui-state-default">(E::ts('Client'))</th>
+                <th class="ui-state-default">(E::ts('Case type'))</th>
+                <th class="ui-state-default">(E::ts('Status'))</th>
+                <th class="ui-state-default">(E::ts('Subject'))</th>
                 <th class="no-sort ui-state-default"></th>
             </tr>
             </thead>
@@ -30,7 +30,7 @@
                     <td>{$case.status}</td>
                     <td>{$case.subject}</td>
                     <td>
-                        <a href="{crmURL p="civicrm/contact/view/case" q="action=view&reset=1&id=`$case.case_id`&cid=`$case.client_id`&context=case"}">{ts}Manage case{/ts}
+                        <a href="{crmURL p="civicrm/contact/view/case" q="action=view&reset=1&id=`$case.case_id`&cid=`$case.client_id`&context=case"}">(E::ts('Manage case'))
                     </td>
                 </tr>
             {/foreach}
